@@ -54,9 +54,9 @@ cat > /etc/jabber/ejabberd.cfg <<EOC
     {mod_blocking,[]},
     {mod_caps,     []},
     {mod_configure,[]},
-    {mod_disco,    []},
+%%    {mod_disco,    []},
     {mod_irc,      []},
-    {mod_http_bind, []},
+%%    {mod_http_bind, []},
     {mod_last,     []},
     {mod_muc,      [
         {access, muc},
@@ -78,11 +78,11 @@ cat > /etc/jabber/ejabberd.cfg <<EOC
         {ip_access, [{allow, "127.0.0.0/8"}, {deny, "0.0.0.0/0"}]},
         {access, register}
     ]},
-    {mod_roster,   []},
-    {mod_shared_roster,[]},
-    {mod_stats,    []},
-    {mod_time,     []},
-    {mod_vcard,    []},
+%%    {mod_roster,   []},
+%%    {mod_shared_roster,[]},
+%%    {mod_stats,    []},
+%%    {mod_time,     []},
+%%    {mod_vcard,    []},
     {mod_version,  []}
 ]}.
 EOC
@@ -107,4 +107,7 @@ ejabberdctl register opensrf public.localhost password
 
 echo " *"
 echo " * eJabber Configured and Runing"
+echo " * Should see listeners on 5222 (xmpp-client), 5280 (xmpp-server) "
 echo " *"
+
+netstat -tanpu | grep beam

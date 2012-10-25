@@ -6,7 +6,7 @@ INSERT INTO config.circ_modifier (code, name, description, sip2_media_type) VALU
 
 DROP SCHEMA m_demo CASCADE;
 create schema m_demo;
-\i sql/10-base.sql
+\i sql/11-import-functions.sql
 select migration_tools.init('m_demo');
 select migration_tools.build('m_demo');
 
@@ -23,7 +23,7 @@ l_call_num TEXT,
 l_price TEXT,
 _whole_call_number TEXT) inherits (m_demo.asset_copy);
 
-\copy m_demo.asset_copy_legacy(egid, hseq, l_location, l_barcode, l_call_num_prefix, l_call_num, l_price ) from 10-item-data.txt
+\copy m_demo.asset_copy_legacy(egid, hseq, l_location, l_barcode, l_call_num_prefix, l_call_num, l_price ) from 12-import-bibs.txt
 
 -- drop items without barcodes
 
@@ -62,7 +62,7 @@ CREATE TABLE m_demo.loc_map (
   eg_location TEXT
 );
 create unique index m_demo_idx1 on m_demo.loc_map (l_location);
-\copy m_demo.loc_map from mapping/location_map.txt
+\copy m_demo.loc_map from 13-import-location-map.txt
 
 ALTER TABLE m_demo.asset_copy_legacy 
 ADD COLUMN eg_circ_mod TEXT,

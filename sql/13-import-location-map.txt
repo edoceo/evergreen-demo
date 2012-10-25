@@ -1,0 +1,76 @@
+RT	art	In Storage - Please Ask
+WBBK	book	Main Floor - Fiction
+WBOOKCD	audiobook	Main Floor - Audiobooks
+WCANCER	book	2nd Floor - Special Collections
+WCAS	audiobook	Main Floor - Audiobooks
+WCD	cd-music	Main Floor - Music
+WCDROM	software	Main Floor - CDRoms
+WCLIFF	book	2nd Floor - Young Adult/Teen Room
+WDVD	dvd	Main Floor - DVDs
+WESL	book	2nd Floor - Special Collections
+WFIC	book	Main Floor - Fiction
+WFL	book	2nd Floor - Special Collections
+WGAME	software gaming	2nd Floor - Young Adult/Teen Room
+WGLOBALDVD	dvd	Main Floor - DVDs
+WGRAPHIC	book	Main Floor - Fiction
+WIFIC	book	Main Floor - Fiction
+WILL	ILL	Information Desk - Interlibrary Loan
+WINDIANACD	cd-music	Main Floor - Music
+WINF	book	2nd Floor - Non-Fiction
+WJBAS	book	Children's Room - Basic Readers
+WJBOOKCD	audiobook	Children's Room - Audiobooks
+WJBREC	audiobook	Children's Room - Audiobooks
+WJCAS	audiobook	Children's Room - Audiobooks
+WJCD	cd-music	Children's Room - Music
+WJCDROM	software	Children's Room - CDRom Bins
+WJDICKEY	book	Children's Room - Special Collections
+WJDVD	dvd	Children's Room - DVDs
+WJE	book	Children's Room - Picture Books
+WJEPBK	book	Children's Room - Paperback Bins
+WJFIC	book	Children's Room - Fiction
+WJFL	book	Children's Room - Special Collections
+WJHOL	book	Children's Room - Holiday Bins
+WJILLFIC	book	Children's Room - Illustrated Fiction
+WJMAG	serial	Children's Room - Magazines
+WJNEW	book	Children's Room - New Arrivals
+WJNF	book	Children's Room - Non-Fiction
+WJNFDVD	dvd	Children's Room - DVDs
+WJNFVID	video	Children's Room - Videos
+WJPARENT	book	Children's Room - Parenting Shelves
+WJREF	reference	Children's Room - Reference
+WJSPCOLL	book	Children's Room - Special Collections
+WJVIDEO	video	Children's Room - Videos
+WJYH	book	Children's Room - Special Collections
+WLOCAL	book	2nd Floor - Reference
+WLOCALREF	reference	2nd Floor - Reference
+WLPFIC	book	Main Floor - Large Print Fiction
+WLPNF	book	Main Floor - Large Print Non-Fiction
+WLUV	book	Main Floor - Romance
+WMAG	serial	2nd Floor - Magazines
+WMFIC	book	Main Floor - Mysteries
+WNEW	book new	Main Floor - New Arrivals
+WNF	book	2nd Floor - Non-Fiction
+WNFDVD	dvd	Main Floor - DVDs
+WNFOVER	book	2nd Floor - Non-Fiction
+WNFVID	video	Main Floor - Videos
+WPICTURE	art	2nd Floor - North Wall
+WPLAYAWAY	audiobook	Main Floor - Audiobooks
+WRC	reference	Tech Processing
+WREF	reference	2nd Floor - Reference
+WRRF	reference	2nd Floor - Reference
+WSF	book	Main Floor - Science Fiction
+WSS	book	Main Floor - Fiction
+WSTAFF	book	Tech Processing
+WSTORAGE	book	In Storage - Please Ask
+WTVDVD	dvd	Main Floor - DVDs
+WVIDEO	video	Main Floor - Videos
+WWFIC	book	Main Floor - Westerns
+WYABOOKCD	audiobook	2nd Floor - Young Adult/Teen Room
+WYADVD	dvd	Main Floor - DVDs
+WYAFIC	book	2nd Floor - Young Adult/Teen Room
+WYAGRAPHIC	book	2nd Floor - Young Adult/Teen Room
+WYAMAG	serial	2nd Floor - Young Adult/Teen Room
+WYANEW	book new	2nd Floor - Young Adult/Teen Room
+WYANF	book	2nd Floor - Young Adult/Teen Room
+WYAREF	reference	2nd Floor - Young Adult/Teen Room
+NEW STORAG	book	In Storage - Please Ask

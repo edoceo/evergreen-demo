@@ -20,6 +20,7 @@ PidFile /var/run/apache2.pid
 
 # Apache Modules
 LoadModule alias_module modules/mod_alias.so
+LoadModule autoindex_module modules/mod_autoindex.so
 LoadModule include_module modules/mod_include.so
 LoadModule log_config_module modules/mod_log_config.so
 LoadModule mime_module modules/mod_mime.so
@@ -41,19 +42,26 @@ AliasMatch ^/opac/.*/extras/selfcheck/(.*) /openils/var/web/opac/extras/selfchec
 DefaultType text/plain
 TypesConfig /etc/mime.types
 
+#
+# Staff Client downloads go here
+<Directory /openils/var/web/pub/>
+    Options +Indexes
+    IndexOptions +FancyIndexing +NameWidth=* +SuppressDescription +VersionSort
+</Directory>
+
 <VirtualHost *:80>
     # ServerName evergreen-demo
-    # DocumentRoot /openils/var/web/
+    DocumentRoot /openils/var/web/
     # DirectoryIndex index.xml index.html index.xhtml
     ## - absorb the shared virtual host settings
     # Include /etc/apache2/eg_vhost.conf
     RewriteEngine On
-    RewriteRule .* https://%{HTTP_HOST} [R=301,L]
+    RewriteRule (.*) https://%{http_host}$1 [l,r=301]
 </VirtualHost>
 
 <VirtualHost *:443>
 
-    DocumentRoot "/openils/var/web"
+    DocumentRoot /openils/var/web
 
 	SSLEngine on
 	# SSLCipherSuite ALL:!ADH:!EXPORT56:RC4+RSA:+HIGH:+MEDIUM:+LOW:+SSLv2:+EXP:+eNULL
@@ -167,6 +175,12 @@ TypesConfig /etc/mime.types
 
     </Location>
 
+    <Location /osrf-gateway-v1>
+        SetHandler osrf_json_gateway_module
+        OSRFGatewayLegacyJSON "false"
+        # Allow from all
+    </Location>
+
     <Location /osrf-http-translator>
         SetHandler osrf_http_translator_module
         # allow from all
@@ -178,3 +192,13 @@ EOC
 
 }
 update_apache
+
+wget http://download.dojotoolkit.org/release-1.3.3/dojo-release-1.3.3.tar.gz
+tar -C /openils/var/web/js -xzf dojo-release-1.3.3.tar.gz
+cp -r /openils/var/web/js/dojo-release-1.3.3/* /openils/var/web/js/dojo/.
+rm dojo-release-1.3.3.tar.gz
+
+# What's differnce between -u and without?
+su -c 'env PATH="/openils/bin:/bin:/usr/bin" autogen.sh' opensrf
+# su -c 'env PATH="/openils/bin:/bin:/usr/bin" autogen.sh -u' opensrf
+
