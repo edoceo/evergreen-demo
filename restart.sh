@@ -45,14 +45,14 @@ function stack_stop()
     exit
   done
   # beam core process
-  while pidof epmd
+  while pidof epmd >/dev/null
   do
     echo "Killing empd"
     kill $(pidof epmd)
   done
 
   # Kill Memcached
-  if pidof memcached
+  if pidof memcached >/dev/null
   then
     echo "Memcache Still Running"
     # /etc/init.d/memcached stop
@@ -61,7 +61,7 @@ function stack_stop()
   fi
 
   # Kill PostgreSQL
-  if pidof postmaster
+  if pidof postmaster >/dev/null
   then
     echo "postgresql still running?"
     exit
@@ -70,11 +70,13 @@ function stack_stop()
 
 function stack_start()
 {
-  /etc/init.d/postgresql-9.1 start
-  /etc/init.d/memcached start
-  /etc/init.d/ejabberd start
-  /etc/init.d/opensrf start
-  /etc/init.d/apache2 start
+    /etc/init.d/postgresql-9.1 start
+    /etc/init.d/memcached start
+    /etc/init.d/ejabberd start
+    sleep 4
+    /etc/init.d/opensrf start
+    sleep 4
+    /etc/init.d/apache2 start
 }
 
 #
@@ -90,8 +92,3 @@ do
     ;;
   esac
 done
-
-#while f=shift
-#do
-#  echo $f
-#done
