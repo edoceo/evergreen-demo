@@ -9,21 +9,6 @@ set -o nounset
 
 egd_root=$(dirname $(readlink -f $0))
 
-# Stop Stack
-/etc/init.d/apache2 stop
-/etc/init.d/opensrf stop
-/etc/init.d/ejabberd stop
-/etc/init.d/memcached stop
-if [ -x /etc/init.d/postgresql-9.1 ]
-then 
-    /etc/init.d/postgresql-9.1 stop
-fi
-if [ -x /etc/init.d/postgresql-9.2 ]
-then 
-    /etc/init.d/postgresql-9.2 stop
-fi
-
-
 # Set some Vars
 opensrf_branch="master"
 # opensrf_branch="remotes/origin/rel_2_1"
@@ -42,13 +27,27 @@ export PGDATABASE="evergreen"
 export EGUSER="egsa"
 export EGPASSWORD="egsa"
 
+# Stop Stack
+/etc/init.d/apache2 stop
+/etc/init.d/opensrf stop
+/etc/init.d/ejabberd stop
+/etc/init.d/memcached stop
+if [ -x /etc/init.d/postgresql-9.1 ]
+then 
+    /etc/init.d/postgresql-9.1 stop
+fi
+if [ -x /etc/init.d/postgresql-9.2 ]
+then 
+    /etc/init.d/postgresql-9.2 stop
+fi
+
 # Run the Updates
 $egd_root/update-opensrf.sh
 $egd_root/update-evergreen.sh
 $egd_root/update-evergreen-client.sh
 
 # Update Database Stuff
-# /opt/edoceo/egd/update-postgresql.sh
+$egd_root/update-postgresql.sh
 if [ -x /etc/init.d/postgresql-9.1 ]
 then 
     /etc/init.d/postgresql-9.1 restart
@@ -58,9 +57,8 @@ then
     /etc/init.d/postgresql-9.2 restart
 fi
 
-
 # Update eJabberd
-/opt/edoceo/egd/update-ejabberd.sh
+$egd_root/update-ejabberd.sh
 /etc/init.d/memcached restart
 /etc/init.d/ejabberd restart
 
@@ -88,7 +86,7 @@ echo -en "request opensrf.math add 2 2\nquit\n" | su -c /openils/bin/srfsh opens
 
 #
 # Updates for Web-Server
-/opt/edoceo/egd/update-apache.sh
+$egd_root/update-apache.sh
 /etc/init.d/apache2 restart
 
 /usr/src/Evergreen/Open-ILS/src/support-scripts/settings-tester.pl
