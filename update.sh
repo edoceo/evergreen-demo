@@ -14,7 +14,15 @@ egd_root=$(dirname $(readlink -f $0))
 /etc/init.d/opensrf stop
 /etc/init.d/ejabberd stop
 /etc/init.d/memcached stop
-/etc/init.d/postgresql-9.1 stop
+if [ -x /etc/init.d/postgresql-9.1 ]
+then 
+    /etc/init.d/postgresql-9.1 stop
+fi
+if [ -x /etc/init.d/postgresql-9.2 ]
+then 
+    /etc/init.d/postgresql-9.2 stop
+fi
+
 
 # Set some Vars
 opensrf_branch="master"
@@ -41,7 +49,15 @@ $egd_root/update-evergreen-client.sh
 
 # Update Database Stuff
 # /opt/edoceo/egd/update-postgresql.sh
-/etc/init.d/postgresql-9.1 restart
+if [ -x /etc/init.d/postgresql-9.1 ]
+then 
+    /etc/init.d/postgresql-9.1 restart
+fi
+if [ -x /etc/init.d/postgresql-9.2 ]
+then 
+    /etc/init.d/postgresql-9.2 restart
+fi
+
 
 # Update eJabberd
 /opt/edoceo/egd/update-ejabberd.sh

@@ -2,23 +2,32 @@
 
 set -o errexit
 
+if [ -z "${EGUSER}" ]; then
+    echo "I Need EGUSER to be set"
+    exit
+fi
+
+if [ -z "${PGUSER}" ]; then
+    echo "I Need PGUSER to be set"
+    exit
+fi
+
 # 25% of RAM to PostgreSQL
 echo $(( $(awk '/MemTotal/ { print $2 }' /proc/meminfo) * 1024 / 4 )) > /proc/sys/kernel/shmmax
 
 # x=$(( $(cat /proc/sys/kernel/shmmax) / 1048576))
 # x=$(( $x / 100 * 80 ))
 # echo -e " ${R}*${N} shared_buffers should be set to ${x}MB"
-# sed -i "s/^shared_buffers.*/shared_buffers = ${x}MB/" /etc/postgresql/9.1/main/postgresql.conf
+# sed -i "s/^shared_buffers.*/shared_buffers = ${x}MB/" /etc/postgresql/9.2/main/postgresql.conf
 # grep -inr shared_buffers /etc/postgresql/
 
-/etc/init.d/postgresql-9.1 restart
-
-if [ -z "${EGUSER}" ]; then
-    exit "I Need EGUSER to be set"
+if [ -x /etc/init.d/postgresql-9.1 ]
+then 
+    /etc/init.d/postgresql-9.1 restart
 fi
-
-if [ -z "${PGUSER}" ]; then
-    exit "I Need PGUSER to be set"
+if [ -x /etc/init.d/postgresql-9.2 ]
+then 
+    /etc/init.d/postgresql-9.2 restart
 fi
 
 #
@@ -37,4 +46,11 @@ function update_database()
 }
 update_database
 
-/etc/init.d/postgresql-9.1 stop
+if [ -x /etc/init.d/postgresql-9.1 ]
+then 
+    /etc/init.d/postgresql-9.1 stop
+fi
+if [ -x /etc/init.d/postgresql-9.2 ]
+then 
+    /etc/init.d/postgresql-9.2 stop
+fi
