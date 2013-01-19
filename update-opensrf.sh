@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 # @file
 # @brief Updates the OpenSRF and Evergreen to git Master
 # @see http://praxis.edoceo.com/howto/evergreen-ils

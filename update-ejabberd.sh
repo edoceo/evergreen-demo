@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 # @file
 # @brief Updates the ejabberd configuration
 # Expects: dev-lang/erlang-15.2 net-im/ejabberd-2.1.10 net-im/jabber-base-0.01

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 
 set -o errexit
 
@@ -35,13 +35,15 @@ fi
 function update_database()
 {
     # su -l -c 'createuser --superuser egpg' postgres || true
+    su -l -c "dropdb ${PGDATABASE}" postgres || true
+    su -l -c "dropuser ${PGUSER}" postgres || true
     echo -en "${PGUSER}\n${PGUSER}\n" | su -l -c "createuser --superuser ${PGUSER}" postgres || true
     cd /usr/src/Evergreen
 
     perl Open-ILS/src/support-scripts/eg_db_config.pl \
         --update-config --service all --create-database --create-schema --create-offline \
-        --user ${PGUSER} --password ${PGUSER} --hostname localhost \
-        --database evergreen --admin-user ${EGUSER} --admin-pass ${EGUSER} >/dev/null
+        --user ${PGUSER} --password ${PGUSER} --hostname ${PGHOSTNAME} \
+        --database ${PGDATABASE} --admin-user ${EGUSER} --admin-pass ${EGUSER} >/dev/null
 
 }
 update_database

@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/bin/bash -x
+
+set -o errexit
 
 /etc/init.d/postgresql-9.1 restart
 
@@ -6,15 +8,16 @@ if [ -z "${PGUSER}" ]; then
     exit "I Need PGUSER to be set"
 fi
 
-# psql -U evergreen -h hostname -f Open-ILS/tests/datasets/concerto.sql
-# psql -U evergreen -h hostname -f Open-ILS/tests/datasets/users_patrons_100.sql
-# psql -U evergreen -h hostname -f Open-ILS/tests/datasets/users_staff_134.sql
+# Load all the Evergreen Sample Data
+cd /usr/src/Evergreen/Open-ILS/tests/datasets/sql
+psql --quiet --file ./load_all.sql
+cd -
 
-cd "$swd"
 psql --quiet --set=ON_ERROR_STOP --file ./sql/01-init.sql >/dev/null
 psql --quiet --set=ON_ERROR_STOP --file ./sql/05-demo-user.sql >/dev/null
 psql --quiet --set=ON_ERROR_STOP --file ./sql/06-patrons.sql >/dev/null
-psql --quiet --set=ON_ERROR_STOP --file ./sql/10-import.sql >/dev/null
+# psql --quiet --set=ON_ERROR_STOP --file ./sql/10-import.sql >/dev/null
+
 #
 #  535  psql -U egpg -h localhost -f tests/datasets/concerto.sql
 #  536  psql -U egpg -h localhost -f tests/datasets/concerto.sql evergreen
@@ -29,27 +32,37 @@ psql --quiet --set=ON_ERROR_STOP --file ./sql/10-import.sql >/dev/null
 #  545  psql -U egpg -f mfhd21.sql evergreen
 #
 
-wget http://www.gutenberg.org/feeds/catalog.marc.zip
-unzip catalog.marc.zip
+rm -f catalog.bre catalog.marc catalog.marc.zip catalog.sql
+wget -qs http://www.gutenberg.org/feeds/catalog.marc.zip >/dev/null
+unzip catalog.marc.zip >/dev/null
+# processes about 240 records per second
+perl /openils/bin/marc2bre.pl \
+    --db_user ${PGUSER} --db_host ${PGHOSTNAME} --db_pw $PGPASSWORD --db_name $PGDATABASE \
+    catalog.marc > catalog.bre
 
 # perl /usr/src/Evergreen/Open-ILS/src/extras/import/direct_ingest.pl catalog.bre > catalog.ingest
 # perl /usr/src/Evergreen/Open-ILS/src/extras/import/pg_loader.pl -or bre -or mrd -or mfr -or mtfe -or mafe -or msfe -or mkfe -or msefe -a mrd -a mfr -a mtfe -a mafe -a msfe -a mkfe -a msefe >catalog.sql <catalog.bre
+/etc/init.d/ejabberd restart
+/etc/init.d/opensrf restart
 
-# Need to split this into chunks of 1024 at a time
-perl /openils/bin/marc2bre.pl --db_user $PGUSER --db_host $PGHOST --db_pw $PGPASSWORD --db_name $PGDATABASE catalog.marc > catalog.bre
+# Need to split this into chunks
 split --lines=2048 catalog.bre catalog_import_
 for f in catalog_import_*
 do
-    echo perl /usr/src/Evergreen/Open-ILS/src/extras/import/pg_loader.pl -or bre -or mrd -or mfr -or mtfe -or mafe -or msfe -or mkfe -or msefe -a mrd -a mfr -a mtfe -a mafe -a msfe -a mkfe -a msefe >catalog.sql <$f
-    # psql -i catalog.sql
-    # echo "COPY biblio.record_entry (active,create_date,creator,deleted,edit_date,editor,fingerprint,id,last_xact_id,marc,quality,source,tcn_source,tcn_value,owner,share_depth) from 'catalog.sql'";
+    perl \
+        /usr/src/Evergreen/Open-ILS/src/extras/import/pg_loader.pl \
+        -or bre -or mrd -or mfr -or mtfe -or mafe -or msfe -or mkfe -or msefe -a mrd -a mfr -a mtfe -a mafe -a msfe -a mkfe -a msefe \
+        >catalog.sql <$f
+
+    psql --command='\i catalog.sql'
     rm $f
 done
 
-# psql -U postgres evergreen -c '\i Evergreen/src/extras/import/quick_metarecord_map.sql'
+psql --command='\i /usr/src/Evergreen/Open-ILS/src/extras/import/quick_metarecord_map.sql'
 # psql -U postgres evergreen -c 'UPDATE biblio.record_entry SET source = 3; ';
 
 # This will take many minutes
-time psql -U ./sql/30-fill-call-copy.sql
+time psql --file ./sql/30-fill-call-copy.sql
 
 # /etc/init.d/postgresql-9.1 stop
+rm -f catalog.bre catalog.marc catalog.marc.zip catalog.sql
