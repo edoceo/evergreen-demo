@@ -17,16 +17,22 @@ function start()
 
 	ebegin "Starting OpenSRF"
 
-	local ret
+	local ret=1
+	local try=0
 
-	start-stop-daemon --start \
-		--env "PATH=/openils/bin:/bin:/usr/bin" \
-		--user opensrf \
-		--exec '/openils/bin/osrf_ctl.sh' \
-		-- -l -a start_all
+	while [ $try -le 3 -a $ret -ne 0 ]
+	do
+        try=$(( $try + 1))
 
-	ret=$?
-    echo " osrf_ctl returned: $ret "
+        start-stop-daemon --start \
+            --env "PATH=/openils/bin:/bin:/usr/bin" \
+            --user opensrf \
+            --exec '/openils/bin/osrf_ctl.sh' \
+            -- -l -a start_all
+
+        ret=$?
+        echo " osrf_ctl returned: $ret "
+    done
 
 	# if [[ $ret != 0 ]] ; then
 	# 	eend $ret

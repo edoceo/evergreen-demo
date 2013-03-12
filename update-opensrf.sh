@@ -6,28 +6,42 @@
 
 set -o errexit
 
+if [ -z "${opensrf_branch}" ]; then
+    echo "I Need opensrf_branch to be set"
+    exit 1
+fi
+
+if [ -z "${opensrf_source}" ]; then
+    echo "I Need opensrf_source to be set"
+    exit 1
+fi
+
+
 # OpenSRF
 function update_opensrf()
 {
-    cd /usr/src
+    rm -fr
 
     # git update
-    if [ -d OpenSRF ]
+    if [ -d $opensrf_source ]
     then
-        cd ./OpenSRF
+        cd $opensrf_source
         git checkout master
-        git pull
+        git pull --rebase
         git checkout $opensrf_branch
     else
-        git clone git://git.evergreen-ils.org/OpenSRF.git
-        cd ./OpenSRF
+        git clone git://git.evergreen-ils.org/OpenSRF.git $opensrf_source
+        cd $opensrf_source
         git checkout $opensrf_branch
     fi
 
-    chown -R opensrf:opensrf .
-    su -c 'make clean' opensrf >/dev/null
-    su -c 'autoreconf -i' opensrf >/dev/null
-    su -c './configure --prefix=/openils && make' opensrf >/dev/null
+    # chown -R opensrf:opensrf .
+    # su -c 'cd /usr/src/OpenSRF && make clean' opensrf >/dev/null
+    # su -c 'cd /usr/src/OpenSRF && autoreconf -i' opensrf >/dev/null
+    # su -c 'cd /usr/src/OpenSRF && ./configure --prefix=/openils && make' opensrf >/dev/null
+    autoreconf -i
+    ./configure --prefix=/openils
+    make
 
     # Prevent:
     ## apxs:Error: Config file /etc/apache2/apache2.conf not found.
@@ -42,8 +56,6 @@ function update_opensrf()
     grep LoadModule /etc/apache2/apache2.conf || echo -en "#A placeholder\nLoadModule placeholder modules/mod_placeholder.so" >> /etc/apache2/apache2.conf
 
     make install-strip >/dev/null
-
-    # cp /usr/src/OpenSRF/src/extras/docgen.xsl /openils/var/web/opac/extras/docgen.xsl
 
     # todo copy from working system
 ##     cat > /openils/conf/opensrf.xml <<EOX

@@ -46,7 +46,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('105294426722963', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, '109766069111696', 8, 'Mills', 'demo123', 'Raul', 'Jimmy', '2007-02-27', '1973-04-10', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, '109766069111696', 8, 'Mills', 'demo123', 'Raul', 'Jimmy', '2015-02-27', '1973-04-10', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 'f', '47455', '2476 Payable Kitchen Crossroad', 'f', 'IN', 'Patricksburg', '', '', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('109766069111696', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -70,7 +70,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('104582233758905', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, '107674637188779', 7, 'Hernandez', 'demo123', 'Mable', 'Erica', '2007-06-22', '1963-12-04', 'II');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, '107674637188779', 7, 'Hernandez', 'demo123', 'Mable', 'Erica', '2015-06-22', '1963-12-04', 'II');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 't', '46156', '2631 Phase Ridge', 'f', 'IN', 'Milroy', '', 'Rush', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('107674637188779', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -184,7 +184,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('104358369635678', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, 'Development440', 6, 'Farmer', 'demo123', 'Michael', 'Russell', '2007-11-18', '1980-06-03', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, 'Development440', 6, 'Farmer', 'demo123', 'Michael', 'Russell', '2015-11-18', '1980-06-03', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 't', '46835', '8438 Intimate Production Loop', 'f', 'IN', 'Fort wayne', '', 'Allen', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('108106929283461', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -214,7 +214,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('104431867628978', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, '102484916461005', 4, 'Mackey', 'demo123', 'Eric', 'Jesus', '2007-04-09', '1987-04-26', 'II');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, '102484916461005', 4, 'Mackey', 'demo123', 'Eric', 'Jesus', '2015-04-09', '1987-04-26', 'II');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 'f', '46347', '226 Student Village', 't', 'IN', 'Kouts', '', 'Porter', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('102484916461005', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -256,7 +256,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('102046847253267', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, 'Confidence552', 7, 'Garrett', 'demo123', 'Diana', 'Maria', '2007-08-09', '1980-10-25', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, 'Confidence552', 7, 'Garrett', 'demo123', 'Diana', 'Maria', '2015-08-09', '1980-10-25', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 't', '47405', '4555 Fundamental Woman Bayoo', 'f', 'IN', 'Bloomington', '', 'Monroe', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('100788765777611', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -352,7 +352,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('107567390114269', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, '103722923315170', 4, 'Braun', 'demo123', 'Stanley', 'Richard', '2007-06-25', '1998-06-21', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, '103722923315170', 4, 'Braun', 'demo123', 'Stanley', 'Richard', '2015-06-25', '1998-06-21', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 'f', '47273', '3580 Internal West Tunnel', 'f', 'IN', 'Scipio', '', 'Jennings', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('103722923315170', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -406,7 +406,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('106767491863665', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, 'Good420', 7, 'Harris', 'demo123', 'Judy', '', '2007-07-15', '1977-05-10', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, 'Good420', 7, 'Harris', 'demo123', 'Judy', '', '2015-07-15', '1977-05-10', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 't', '47172', '1166 Straight Panel Ranch', 'f', 'IN', 'Sellersburg', '', 'Clark', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('106097511650263', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -424,7 +424,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('106208270947705', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, 'Border619', 8, 'Mclaughlin', 'demo123', 'Thelma', 'Barbara', '2007-01-27', '1983-10-06', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, 'Border619', 8, 'Mclaughlin', 'demo123', 'Thelma', 'Barbara', '2015-01-27', '1983-10-06', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 't', '46221', '160 Dreadful Wood Canyon', 'f', 'IN', 'Indianapolis', '', 'Marion', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('101789064767593', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -490,7 +490,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('105954481665629', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, '108017735362963', 8, 'Bender', 'demo123', 'John', '', '2007-08-02', '1962-08-08', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, '108017735362963', 8, 'Bender', 'demo123', 'John', '', '2015-08-02', '1962-08-08', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 't', '47390', '6163 Application Shoal', 'f', 'IN', 'Union city', '', 'Randolph', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('108017735362963', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -502,13 +502,13 @@ INSERT INTO actor.card (barcode, usr) VALUES ('104281231270993', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, 'Tooth644', 8, 'Tatum', 'demo123', 'Arturo', 'Donald', '2007-07-10', '1980-08-10', 'Jr');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, 'Tooth644', 8, 'Tatum', 'demo123', 'Arturo', 'Donald', '2015-07-10', '1980-08-10', 'Jr');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 't', '46561', '2093 Neighbouring Range Ranch', 'f', 'IN', 'Osceola', '', 'St joseph', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('102773508455023', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, 'Capital982', 4, 'Mann', 'demo123', 'Flora', 'Leslie', '2007-06-28', '1987-08-27', 'II');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, 'Capital982', 4, 'Mann', 'demo123', 'Flora', 'Leslie', '2015-06-28', '1987-08-27', 'II');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 'f', '47660', '2809 Fine Birth Lodge', 'f', 'IN', 'Oakland city', '', 'Gibson', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('100324942965349', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -520,7 +520,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('100273710152751', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, 'Contract438', 9, 'White', 'demo123', 'John', 'Michael', '2007-03-04', '1963-09-05', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, 'Contract438', 9, 'White', 'demo123', 'John', 'Michael', '2015-03-04', '1963-09-05', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 'f', '46266', '4458 Separate Government Flat', 'f', 'IN', 'Indianapolis', '', 'Marion', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('109723504541258', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -532,7 +532,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('102594150533819', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, 'Desk534', 8, 'Anderson', 'demo123', 'Roger', 'Terry', '2007-07-26', '1990-06-06', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, 'Desk534', 8, 'Anderson', 'demo123', 'Roger', 'Terry', '2015-07-26', '1990-06-06', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 'f', '47710', '9672 Output Groves', 'f', 'IN', 'Evansville', '', 'Vanderburgh', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('102870283901281', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -544,7 +544,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('106666077956554', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, 'Planning245', 9, 'Rodriguez', 'demo123', 'Monty', 'Ernest', '2007-08-17', '1983-11-03', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, 'Planning245', 9, 'Rodriguez', 'demo123', 'Monty', 'Ernest', '2015-08-17', '1983-11-03', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 't', '46140', '5871 Rise Avenue', 'f', 'IN', 'Greenfield', '', '', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('101911599235162', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -658,13 +658,13 @@ INSERT INTO actor.card (barcode, usr) VALUES ('103390867013100', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, '107881797760645', 9, 'Noel', 'demo123', 'Gary', 'Devin', '2007-11-07', '1986-06-23', 'Sr');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, '107881797760645', 9, 'Noel', 'demo123', 'Gary', 'Devin', '2015-11-07', '1986-06-23', 'Sr');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 'f', '47161', '3582 Victorious Weather Isle', 'f', 'IN', 'New salisbury', '', 'Harrison', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('107881797760645', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, '103589416711314', 8, 'Kelley', 'demo123', 'Natalie', '', '2007-02-25', '1975-02-20', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, '103589416711314', 8, 'Kelley', 'demo123', 'Natalie', '', '2015-02-25', '1975-02-20', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 'f', '46311', '4943 Radio Mountain', 'f', 'IN', 'Dyer', '', '', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('103589416711314', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -784,7 +784,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('103814477899464', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, 'Manager21', 9, 'Williams', 'demo123', 'Shirley', 'Rhonda', '2007-02-10', '1999-01-19', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, 'Manager21', 9, 'Williams', 'demo123', 'Shirley', 'Rhonda', '2015-02-10', '1999-01-19', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 'f', '47406', '4446 Welfare Gardens', 'f', 'IN', 'Bloomington', '', '', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('100082137632449', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -796,7 +796,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('105293879868883', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, 'General417', 8, 'Terry', 'demo123', 'Jeremy', 'Carlos', '2007-06-18', '1981-01-16', 'Sr');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, 'General417', 8, 'Terry', 'demo123', 'Jeremy', 'Carlos', '2015-06-18', '1981-01-16', 'Sr');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 'f', '47010', '1626 Revolutionary Course Course', 't', 'IN', 'Bath', '', '', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('107980350148726', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -820,7 +820,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('102498135677712', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, '103959354126858', 7, 'Clark', 'demo123', 'Ben', 'Raymond', '2007-08-22', '1982-10-24', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, '103959354126858', 7, 'Clark', 'demo123', 'Ben', 'Raymond', '2015-08-22', '1982-10-24', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 't', '47431', '8289 Research Ranch', 'f', 'IN', 'Freedom', '', 'Owen', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('103959354126858', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -850,7 +850,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('103248432796842', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, '105768917404413', 9, 'Webster', 'demo123', 'Daniel', '', '2007-07-21', '1963-10-10', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, '105768917404413', 9, 'Webster', 'demo123', 'Daniel', '', '2015-07-21', '1963-10-10', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 't', '47670', '9303 Party Plains', 'f', 'IN', 'Princeton', '', 'Gibson', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('105768917404413', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -952,7 +952,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('100653267428288', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, '108982827207434', 7, 'Pierce', 'demo123', 'David', '', '2007-08-10', '1975-01-22', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, '108982827207434', 7, 'Pierce', 'demo123', 'David', '', '2015-08-10', '1975-01-22', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 't', '47744', '8373 Fancy Drink Beach', 'f', 'IN', 'Evansville', '', '', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('108982827207434', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -976,7 +976,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('109257187931119', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, '109121249021330', 7, 'Booker', 'demo123', 'Tamara', '', '2007-08-07', '1989-02-16', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, '109121249021330', 7, 'Booker', 'demo123', 'Tamara', '', '2015-08-07', '1989-02-16', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 't', '46062', '9327 Final Gate Hollow', 't', 'IN', 'Noblesville', '', 'Hamilton', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('109121249021330', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -1006,7 +1006,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('107047560456870', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, 'Aspect658', 4, 'Helms', 'demo123', 'Nicholas', 'Leon', '2007-08-07', '1997-02-28', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, 'Aspect658', 4, 'Helms', 'demo123', 'Nicholas', 'Leon', '2015-08-07', '1997-02-28', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 't', '46953', '9049 Forthcoming Trust Canyon', 'f', 'IN', 'Marion', '', '', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('100034501776386', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -1018,7 +1018,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('106595417693264', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, '104190681099614', 7, 'Mack', 'demo123', 'Peter', 'Brandon', '2007-10-20', '1970-04-10', 'Jr');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, '104190681099614', 7, 'Mack', 'demo123', 'Peter', 'Brandon', '2015-10-20', '1970-04-10', 'Jr');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 't', '47575', '6717 Resource Expressway', 'f', 'IN', 'Saint anthony', '', '', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('104190681099614', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -1096,7 +1096,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('109213728767511', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, 'Question942', 8, 'Riley', 'demo123', 'Lindsay', 'Kelly', '2007-09-22', '1973-06-06', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, 'Question942', 8, 'Riley', 'demo123', 'Lindsay', 'Kelly', '2015-09-22', '1973-06-06', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 't', '47713', '7333 Origin Tunnel', 't', 'IN', 'Evansville', '', '', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('108894402276829', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -1108,7 +1108,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('100081078675864', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, 'Desire579', 9, 'Stevens', 'demo123', 'Bobbi', 'Felicia', '2007-01-24', '1974-05-07', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, 'Desire579', 9, 'Stevens', 'demo123', 'Bobbi', 'Felicia', '2015-01-24', '1974-05-07', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 't', '46991', '4956 Uniform Officer Landing', 'f', 'IN', 'Van buren', '', 'Grant', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('109410308418260', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -1246,7 +1246,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('106650589268493', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, 'Front342', 5, 'Jacobson', 'demo123', 'Jean', 'Jamie', '2007-01-07', '1962-06-21', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, 'Front342', 5, 'Jacobson', 'demo123', 'Jean', 'Jamie', '2015-01-07', '1962-06-21', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 't', '46280', '8638 Electrical Facility Shoal', 'f', 'IN', 'Indianapolis', '', 'Hamilton', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('103167000001120', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -1270,7 +1270,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('103550353080555', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, 'Conference890', 4, 'Hardy', 'demo123', 'Judith', 'Virginia', '2007-08-03', '1978-04-10', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, 'Conference890', 4, 'Hardy', 'demo123', 'Judith', 'Virginia', '2015-08-03', '1978-04-10', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 't', '46225', '1213 Overall Science Annex', 't', 'IN', 'Indianapolis', '', '', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('108326025712806', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -1312,7 +1312,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('103426831739219', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, '108177596050404', 4, 'Foster', 'demo123', 'Donna', 'Susan', '2007-11-11', '1975-06-13', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, '108177596050404', 4, 'Foster', 'demo123', 'Donna', 'Susan', '2015-11-11', '1975-06-13', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 't', '47246', '8052 Mathematical Accident Stravenue', 't', 'IN', 'Hope', '', '', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('108177596050404', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -1504,13 +1504,13 @@ INSERT INTO actor.card (barcode, usr) VALUES ('104864250111402', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, '106457250101118', 4, 'Harris', 'demo123', 'Tracy', 'Ashlee', '2007-02-16', '1961-04-04', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, '106457250101118', 4, 'Harris', 'demo123', 'Tracy', 'Ashlee', '2015-02-16', '1961-04-04', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 'f', '47246', '126 Territorial Desire Square', 'f', 'IN', 'Hope', '', '', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('106457250101118', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, '106504481128822', 8, 'Hudson', 'demo123', 'Ricky', 'Robert', '2007-11-24', '1996-07-02', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, '106504481128822', 8, 'Hudson', 'demo123', 'Ricky', 'Robert', '2015-11-24', '1996-07-02', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 't', '46120', '2412 Condition Trail', 't', 'IN', 'Cloverdale', '', 'Putnam', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('106504481128822', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -1564,13 +1564,13 @@ INSERT INTO actor.card (barcode, usr) VALUES ('109568426645249', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, '104511720406888', 7, 'Clark', 'demo123', 'Kathleen', 'Melinda', '2007-03-09', '1974-11-10', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, '104511720406888', 7, 'Clark', 'demo123', 'Kathleen', 'Melinda', '2015-03-09', '1974-11-10', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 't', '46502', '5854 Latin Step Lock', 'f', 'IN', 'Atwood', '', 'Kosciusko', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('104511720406888', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, '106742055607013', 4, 'Garner', 'demo123', 'Shawn', 'Rachel', '2007-12-12', '1992-09-10', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, '106742055607013', 4, 'Garner', 'demo123', 'Shawn', 'Rachel', '2015-12-12', '1992-09-10', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 'f', '47247', '2634 Rainy Manager Shore', 't', 'IN', 'Jonesville', '', 'Bartholomew', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('106742055607013', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -1582,7 +1582,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('103219677095818', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, 'Police249', 6, 'Hatcher', 'demo123', 'Herbert', 'Willie', '2007-01-13', '1966-04-16', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, 'Police249', 6, 'Hatcher', 'demo123', 'Herbert', 'Willie', '2015-01-13', '1966-04-16', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 't', '47322', '4937 Rubber Colleague Rue', 'f', 'IN', 'Bentonville', '', 'Fayette', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('107863167782638', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -1642,7 +1642,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('106401248583301', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, 'Hope547', 8, 'Sutton', 'demo123', 'Linda', 'Kathryn', '2007-08-06', '1986-04-22', 'Jr');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, 'Hope547', 8, 'Sutton', 'demo123', 'Linda', 'Kathryn', '2015-08-06', '1986-04-22', 'Jr');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 'f', '47747', '5698 Confident Lord Club', 'f', 'IN', 'Evansville', '', 'Vanderburgh', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('104418746863450', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -1672,7 +1672,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('107879677516334', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, '105824724258353', 5, 'Burton', 'demo123', 'Margaret', 'Lisa', '2007-01-26', '1981-03-20', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, '105824724258353', 5, 'Burton', 'demo123', 'Margaret', 'Lisa', '2015-01-26', '1981-03-20', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 'f', '47959', '1106 Miniature Love Port', 't', 'IN', 'Monon', '', 'White', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('105824724258353', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -1738,7 +1738,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('102181733822488', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, 'Comparison896', 6, 'Smith', 'demo123', 'Theresa', 'Ollie', '2007-10-25', '1973-03-07', 'II');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, 'Comparison896', 6, 'Smith', 'demo123', 'Theresa', 'Ollie', '2015-10-25', '1973-03-07', 'II');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 'f', '46926', '9050 Procedure Expressway', 'f', 'IN', 'Denver', '', 'Miami', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('103930358291872', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -1762,7 +1762,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('100274693551699', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, 'Dinner9', 7, 'Davila', 'demo123', 'Emma', '', '2007-01-11', '1979-09-11', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, 'Dinner9', 7, 'Davila', 'demo123', 'Emma', '', '2015-01-11', '1979-09-11', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 't', '46015', '386 Representative Battle Trail', 'f', 'IN', 'Anderson', '', 'Madison', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('102794546289845', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -1774,7 +1774,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('106454642855895', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, 'Car742', 8, 'Young', 'demo123', 'John', 'Francis', '2007-06-27', '1962-09-10', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, 'Car742', 8, 'Young', 'demo123', 'John', 'Francis', '2015-06-27', '1962-09-10', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 't', '47110', '6560 Style Trail', 'f', 'IN', 'Central', '', 'Harrison', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('102682840328881', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -1936,7 +1936,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('102145633788396', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, '107570879908254', 5, 'Miller', 'demo123', 'Eric', 'Herbert', '2007-05-25', '1971-09-21', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, '107570879908254', 5, 'Miller', 'demo123', 'Eric', 'Herbert', '2015-05-25', '1971-09-21', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 'f', '47454', '1441 Desire River', 'f', 'IN', 'Paoli', '', 'Orange', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('107570879908254', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -2026,7 +2026,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('101167485627333', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, 'Call949', 5, 'Cooper', 'demo123', 'Mary', '', '2007-10-19', '1979-07-11', 'Sr');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, 'Call949', 5, 'Cooper', 'demo123', 'Mary', '', '2015-10-19', '1979-07-11', 'Sr');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 'f', '46254', '5331 Aspect Estates', 'f', 'IN', 'Indianapolis', '', '', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('100058340493158', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -2068,7 +2068,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('102220251074321', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, 'Existence733', 8, 'Hale', 'demo123', 'Byron', '', '2007-06-14', '1962-12-14', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, 'Existence733', 8, 'Hale', 'demo123', 'Byron', '', '2015-06-14', '1962-12-14', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 't', '46550', '8315 Personal Potential Extensions', 'f', 'IN', 'Nappanee', '', 'Elkhart', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('100153852065432', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -2098,7 +2098,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('105130309357221', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, '106809127366924', 6, 'Shoemaker', 'demo123', 'Susan', 'Genevieve', '2007-07-16', '1999-06-28', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, '106809127366924', 6, 'Shoemaker', 'demo123', 'Susan', 'Genevieve', '2015-07-16', '1999-06-28', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 'f', '46072', '4965 Trust Landing', 'f', 'IN', 'Tipton', '', 'Tipton', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('106809127366924', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -2146,7 +2146,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('109464643794306', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, '100085956904250', 4, 'Lewis', 'demo123', 'Adam', '', '2007-12-22', '1978-10-03', 'II');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, '100085956904250', 4, 'Lewis', 'demo123', 'Adam', '', '2015-12-22', '1978-10-03', 'II');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 'f', '47037', '7786 News Camp', 'f', 'IN', 'Osgood', '', 'Ripley', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('100085956904250', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -2344,7 +2344,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('102555587834240', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, 'Roof607', 5, 'Gibson', 'demo123', 'Jeffrey', 'Irvin', '2007-09-09', '1983-03-24', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, 'Roof607', 5, 'Gibson', 'demo123', 'Jeffrey', 'Irvin', '2015-09-09', '1983-03-24', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 't', '47170', '1185 Overall Garden Pine', 'f', 'IN', 'Scottsburg', '', 'Scott', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('109572621243395', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -2356,7 +2356,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('101919373206465', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, '102649951974566', 4, 'Evans', 'demo123', 'Carolyn', '', '2007-04-16', '1997-11-11', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, '102649951974566', 4, 'Evans', 'demo123', 'Carolyn', '', '2015-04-16', '1997-11-11', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 'f', '46290', '6 Sound Garden', 't', 'IN', 'Indianapolis', '', 'Hamilton', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('102649951974566', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -2410,7 +2410,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('107346200229606', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, 'Software632', 8, 'Moore', 'demo123', 'Homer', 'Justin', '2007-09-18', '1971-11-07', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, 'Software632', 8, 'Moore', 'demo123', 'Homer', 'Justin', '2015-09-18', '1971-11-07', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 'f', '46865', '1998 Smart Shot Canyon', 't', 'IN', 'Fort wayne', '', 'Allen', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('103612384022010', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -2446,7 +2446,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('109178360913123', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, '106911041286207', 9, 'Taylor', 'demo123', 'Kelly', 'Marianne', '2007-12-21', '1984-04-02', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, '106911041286207', 9, 'Taylor', 'demo123', 'Kelly', 'Marianne', '2015-12-21', '1984-04-02', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 't', '47834', '6799 Package Mountain', 'f', 'IN', 'Brazil', '', '', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('106911041286207', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -2596,19 +2596,19 @@ INSERT INTO actor.card (barcode, usr) VALUES ('108377176216222', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, '106195255519988', 6, 'Collier', 'demo123', 'Gary', 'Bobby', '2007-11-12', '1987-04-28', 'Sr');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, '106195255519988', 6, 'Collier', 'demo123', 'Gary', 'Bobby', '2015-11-12', '1987-04-28', 'Sr');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 't', '46986', '6310 Indirect Pressure Gateway', 'f', 'IN', 'Swayzee', '', 'Grant', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('106195255519988', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, '108633008451049', 9, 'Davis', 'demo123', 'Carl', '', '2007-07-26', '1964-04-21', 'II');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, '108633008451049', 9, 'Davis', 'demo123', 'Carl', '', '2015-07-26', '1964-04-21', 'II');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 'f', '46410', '8669 Immediate Sun Park', 't', 'IN', 'Merrillville', '', '', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('108633008451049', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, 'Department358', 8, 'Hopper', 'demo123', 'Chris', 'Leonard', '2007-04-13', '1976-11-14', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, 'Department358', 8, 'Hopper', 'demo123', 'Chris', 'Leonard', '2015-04-13', '1976-11-14', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 't', '47980', '3825 Difficult Sex Neck', 'f', 'IN', 'Reynolds', '', 'White', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('100539293885010', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -2620,7 +2620,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('101757364404544', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, 'Motor727', 4, 'Anderson', 'demo123', 'Karen', 'Edna', '2007-09-25', '1987-09-26', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, 'Motor727', 4, 'Anderson', 'demo123', 'Karen', 'Edna', '2015-09-25', '1987-09-26', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 't', '47433', '4101 Mute Customer Shoals', 'f', 'IN', 'Gosport', '', 'Owen', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('109783664555268', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -2770,7 +2770,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('108579541655623', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, 'Start555', 5, 'Smith', 'demo123', 'James', 'Wesley', '2007-08-25', '1971-06-21', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, 'Start555', 5, 'Smith', 'demo123', 'James', 'Wesley', '2015-08-25', '1971-06-21', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 'f', '47960', '5032 Wee Expense Way', 'f', 'IN', 'Monticello', '', 'White', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('106726216959374', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -2794,7 +2794,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('103998592861385', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, '108165769117652', 9, 'Powell', 'demo123', 'James', 'Lowell', '2007-01-25', '1961-08-09', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, '108165769117652', 9, 'Powell', 'demo123', 'James', 'Lowell', '2015-01-25', '1961-08-09', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 't', '47427', '9615 Account Center', 'f', 'IN', 'Coal city', '', '', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('108165769117652', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -2824,7 +2824,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('102493629813889', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, '109475879577685', 5, 'Armstrong', 'demo123', 'Jose', 'Vincent', '2007-08-13', '1970-02-10', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, '109475879577685', 5, 'Armstrong', 'demo123', 'Jose', 'Vincent', '2015-08-13', '1970-02-10', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 't', '46298', '1955 Right Greens', 'f', 'IN', 'Indianapolis', '', '', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('109475879577685', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -2842,7 +2842,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('108625836539077', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, '108825103353247', 7, 'Valdez', 'demo123', 'Nancy', 'Delores', '2007-08-08', '1964-10-10', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, '108825103353247', 7, 'Valdez', 'demo123', 'Nancy', 'Delores', '2015-08-08', '1964-10-10', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 't', '47714', '9194 Homeless Hall Gardens', 'f', 'IN', 'Evansville', '', 'Vanderburgh', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('108825103353247', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -2902,7 +2902,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('107872641950136', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, 'Drawing372', 7, 'Moran', 'demo123', 'Kimberly', 'Lilia', '2007-11-21', '1992-07-14', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, 'Drawing372', 7, 'Moran', 'demo123', 'Kimberly', 'Lilia', '2015-11-21', '1992-07-14', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 't', '46011', '1206 Revolutionary Television Shore', 't', 'IN', 'Anderson', '', 'Madison', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('104072682263701', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -2962,7 +2962,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('103372219589256', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, '109902684826638', 4, 'Stevens', 'demo123', 'Thelma', 'Ana', '2007-10-08', '1999-03-05', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, '109902684826638', 4, 'Stevens', 'demo123', 'Thelma', 'Ana', '2015-10-08', '1999-03-05', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 't', '46034', '6867 Disturbing Owner Ville', 'f', 'IN', 'Cicero', '', 'Hamilton', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('109902684826638', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -2986,7 +2986,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('105790951938473', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, 'Importance273', 9, 'Barton', 'demo123', 'Robin', '', '2007-01-08', '1984-09-26', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, 'Importance273', 9, 'Barton', 'demo123', 'Robin', '', '2015-01-08', '1984-09-26', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 'f', '47904', '3536 Grubby Holiday Run', 'f', 'IN', 'Lafayette', '', '', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('109158058593156', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -2998,7 +2998,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('108444276941646', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, '103730135443795', 8, 'England', 'demo123', 'Patricia', 'Kimberly', '2007-01-11', '1992-03-26', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, '103730135443795', 8, 'England', 'demo123', 'Patricia', 'Kimberly', '2015-01-11', '1992-03-26', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 't', '47885', '7695 View Station', 't', 'IN', 'West terre haute', '', 'Vigo', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('103730135443795', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -3052,7 +3052,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('104970295093986', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, 'Understanding70', 9, 'Jones', 'demo123', 'Cynthia', 'Gloria', '2007-05-13', '1961-09-14', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, 'Understanding70', 9, 'Jones', 'demo123', 'Cynthia', 'Gloria', '2015-05-13', '1961-09-14', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 't', '47203', '618 Passive Journey River', 'f', 'IN', 'Columbus', '', 'Bartholomew', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('101876622692929', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -3094,7 +3094,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('107687895933368', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, '101288309354156', 5, 'Figueroa', 'demo123', 'Martha', 'Cheryl', '2007-03-25', '1973-11-21', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, '101288309354156', 5, 'Figueroa', 'demo123', 'Martha', 'Cheryl', '2015-03-25', '1973-11-21', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 'f', '47580', '9280 Legitimate Attempt Crescent', 'f', 'IN', 'Schnellville', '', 'Dubois', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('101288309354156', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -3124,7 +3124,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('103930066049935', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, 'Date900', 8, 'Jones', 'demo123', 'Sylvia', 'Amber', '2007-06-27', '1983-11-03', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, 'Date900', 8, 'Jones', 'demo123', 'Sylvia', 'Amber', '2015-06-27', '1983-11-03', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 'f', '46988', '6818 Alleged Incident Lodge', 'f', 'IN', 'Twelve mile', '', 'Cass', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('102888317602110', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -3244,7 +3244,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('105054539807221', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, 'Trial267', 9, 'Barnes', 'demo123', 'Mary', '', '2007-08-07', '1984-10-14', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, 'Trial267', 9, 'Barnes', 'demo123', 'Mary', '', '2015-08-07', '1984-10-14', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 'f', '47129', '9531 Border Courts', 'f', 'IN', 'Clarksville', '', 'Clark', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('106406312126921', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -3418,7 +3418,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('108367351217662', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, 'Month46', 8, 'Herbert', 'demo123', 'Renee', '', '2007-03-19', '1974-01-05', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, 'Month46', 8, 'Herbert', 'demo123', 'Renee', '', '2015-03-19', '1974-01-05', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 't', '46962', '9204 Average Effort Garden', 'f', 'IN', 'North manchester', '', 'Wabash', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('104770287929169', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -3448,7 +3448,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('101635967343275', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, '108854996455193', 4, 'Evans', 'demo123', 'Jermaine', 'Willie', '2007-12-14', '1962-03-01', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, '108854996455193', 4, 'Evans', 'demo123', 'Jermaine', 'Willie', '2015-12-14', '1962-03-01', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 't', '47432', '9477 Content Magazine Place', 'f', 'IN', 'French lick', '', '', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('108854996455193', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -3472,7 +3472,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('103556899179758', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, '102324340256676', 9, 'Foreman', 'demo123', 'Krista', '', '2007-04-03', '1987-09-24', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, '102324340256676', 9, 'Foreman', 'demo123', 'Krista', '', '2015-04-03', '1987-09-24', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 'f', '46211', '2553 Sky Neck', 'f', 'IN', 'Indianapolis', '', 'Marion', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('102324340256676', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -3574,7 +3574,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('106582050529908', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, '107540525115947', 8, 'Valdez', 'demo123', 'Kristina', 'Tammy', '2007-04-27', '1998-08-06', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, '107540525115947', 8, 'Valdez', 'demo123', 'Kristina', 'Tammy', '2015-04-27', '1998-08-06', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 't', '46274', '2266 Winner Island', 't', 'IN', 'Indianapolis', '', 'Marion', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('107540525115947', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -3586,7 +3586,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('103097338335820', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, '106816443267380', 7, 'Fleming', 'demo123', 'Kimberly', 'Ruth', '2007-03-06', '1999-10-27', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 3, '106816443267380', 7, 'Fleming', 'demo123', 'Kimberly', 'Ruth', '2015-03-06', '1999-10-27', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 't', '46540', '5276 Safety Village', 't', 'IN', 'Middlebury', '', '', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('106816443267380', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
@@ -3610,7 +3610,7 @@ INSERT INTO actor.card (barcode, usr) VALUES ('108565885290985', CURRVAL('actor.
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');
 COMMIT;
 BEGIN;
-INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, '105591696548126', 9, 'Sherman', 'demo123', 'Lynda', 'Lorene', '2007-02-18', '1998-01-02', '');
+INSERT INTO actor.usr (profile, ident_type, usrname, home_ou, family_name, passwd, first_given_name, second_given_name, expire_date, dob, suffix) VALUES (1, 1, '105591696548126', 9, 'Sherman', 'demo123', 'Lynda', 'Lorene', '2015-02-18', '1998-01-02', '');
 INSERT INTO actor.usr_address (country, within_city_limits, post_code, street1, valid, state, city, street2, county, usr) VALUES ('USA', 't', '47457', '2894 Inherent Talk Viaduct', 'f', 'IN', 'Scotland', '', '', CURRVAL('actor.usr_id_seq'));
 INSERT INTO actor.card (barcode, usr) VALUES ('105591696548126', CURRVAL('actor.usr_id_seq'));
 UPDATE actor.usr SET card = CURRVAL('actor.card_id_seq'), billing_address = CURRVAL('actor.usr_address_id_seq'), credit_forward_balance = '0', mailing_address = CURRVAL('actor.usr_address_id_seq') WHERE id=CURRVAL('actor.usr_id_seq');

@@ -5,20 +5,16 @@
 
 set -o errexit
 
-# https://developer.mozilla.org/en/xul_application_packaging
-# The Documentation states:
-# BUILD ID should be a unique build identifier, usually date based, and should be different for each released version
-# VERSION should be in a format as described here:
-# https://developer.mozilla.org/en/Toolkit_version_format
 
-bd="/usr/src/Evergreen/Open-ILS/xul/staff_client"
+bd="$openils_source/Open-ILS/xul/staff_client"
 hm=$(date +%H%M)
 
-BUILD_ID=""
-# Stamp is used to make the web-root
-STAMP_ID="demo"
-VERSION=$(date +%Y.%V)
-#AUTOUPDATE_HOST=
+# Handle this bug in 2.2 based system
+# @see https://bugs.launchpad.net/evergreen/+bug/988493
+if [ -z "$WEBDIR" ]; then
+    export WEBDIR=/openils/var/web
+fi
+
 
 function move_to_web()
 {
@@ -39,7 +35,7 @@ function move_to_web()
 # @see http://www.open-ils.org/dokuwiki/doku.php?id=mozilla-devel:building_the_staff_client
 cd $bd/
 # sed -i 's|!define PRODUCT_TAG.+|!define PRODUCT_TAG "Busby is Great"|' windowssetup.nsi
-make clean >/dev/null
+make clean
 # make STAFF_CLIENT_BUILD_ID="demo" STAFF_CLIENT_STAMP_ID="demo" build
 # make STAFF_CLIENT_BUILD_ID="demo" STAFF_CLIENT_STAMP_ID="demo" install
 # make STAFF_CLIENT_BUILD_ID="demo" STAFF_CLIENT_STAMP_ID="demo" rigrelease
@@ -49,20 +45,20 @@ make \
     STAFF_CLIENT_BUILD_ID="$BUILD_ID" \
     STAFF_CLIENT_STAMP_ID="$STAMP_ID" \
     STAFF_CLIENT_VERSION="$VERSION" \
-    build >/dev/null
+    build
 
 make \
     STAFF_CLIENT_BUILD_ID="$BUILD_ID" \
     STAFF_CLIENT_STAMP_ID="$STAMP_ID" \
     STAFF_CLIENT_VERSION="$VERSION" \
-    rigrelease >/dev/null
+    rigrelease
 
 # Manually Create Linux Client
 lc="linux-staff-client-32bit"
 mkdir -p ./$lc/
 pushd ./$lc/
 rsync --archive --delete ../build/ ./staff-client/
-curl http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/14.0.1/runtimes/xulrunner-14.0.1.en-US.linux-i686.tar.bz2 | tar -xj
+curl -qs http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/14.0.1/runtimes/xulrunner-14.0.1.en-US.linux-i686.tar.bz2 | tar -xj
 cat >evergreen.sh <<EOS
 #!/bin/bash
 
@@ -74,12 +70,13 @@ EOS
 chmod 0755 evergreen.sh
 popd
 tar -zcf $lc.tgz ./$lc/
-mv $lc.tgz /openils/var/web/staff-client
+mv $lc.tgz "/openils/var/web/staff-client/$lc.tgz"
 
 lc="linux-staff-client-64bit"
 mkdir -p ./$lc/
 pushd ./$lc/
-curl http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/14.0.1/runtimes/xulrunner-14.0.1.en-US.linux-x86_64.tar.bz2 | tar -xj
+rsync --archive --delete ../build/ ./staff-client/
+curl -qs http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/14.0.1/runtimes/xulrunner-14.0.1.en-US.linux-x86_64.tar.bz2 | tar -xj
 cat >evergreen.sh <<EOS
 #!/bin/bash
 
@@ -91,65 +88,70 @@ EOS
 chmod 0755 evergreen.sh
 popd
 tar -zcf $lc.tgz ./$lc/
-mv $lc.tgz /openils/var/web/staff-client
+mv $lc.tgz "/openils/var/web/staff-client/$lc.tgz"
 # wget http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/16.0/runtimes/xulrunner-16.0.en-US.linux-x86_64.tar.bz2
 
 # Puts to $(DESTDIR)$(WEBDIR)/xul/$(STAFF_CLIENT_STAMP_ID)
 # make compress-javascript
 # make AUTOUPDATE_HOST="$(hostname -f)" build win-client
 
+# WEBDIR
 make \
     STAFF_CLIENT_BUILD_ID="$BUILD_ID" \
     STAFF_CLIENT_STAMP_ID="$STAMP_ID" \
     STAFF_CLIENT_VERSION="$VERSION" \
-    install >/dev/null
+    install
 
 make \
     STAFF_CLIENT_BUILD_ID="$BUILD_ID" \
     STAFF_CLIENT_STAMP_ID="$STAMP_ID" \
     STAFF_CLIENT_VERSION="$VERSION" \
-    rigrelease >/dev/null
+    rigrelease
 
 make \
     STAFF_CLIENT_BUILD_ID="$BUILD_ID" \
     STAFF_CLIENT_STAMP_ID="$STAMP_ID" \
     STAFF_CLIENT_VERSION="$VERSION" \
-    win-client >/dev/null
+    win-client
 
 move_to_web
 
 #
 # Build a Debug Version
 BUILD_ID="debug"
-make clean >/dev/null
+make clean
 # This is necessary to get DOM Inspector and Venkman
-make fetch-extensions >/dev/null
-make \
-    STAFF_CLIENT_BUILD_ID="$BUILD_ID" \
-    STAFF_CLIENT_STAMP_ID="$STAMP_ID" \
-    STAFF_CLIENT_VERSION="$VERSION" \
-    devbuild >/dev/null
 
-rsync --archive --delete ./build/ ./devbuild/
-rsync --archive ./extensions/ ./devbuild/extensions/
+# 2.2 and older don't have this?
+if [ grep -q fetch-extensions Makefile ]; then
+    make fetch-extensions
+    make \
+        STAFF_CLIENT_BUILD_ID="$BUILD_ID" \
+        STAFF_CLIENT_STAMP_ID="$STAMP_ID" \
+        STAFF_CLIENT_VERSION="$VERSION" \
+        devbuild
 
-make \
-    STAFF_CLIENT_BUILD_ID="$BUILD_ID" \
-    STAFF_CLIENT_STAMP_ID="$STAMP_ID" \
-    STAFF_CLIENT_VERSION="$VERSION" \
-    install >/dev/null
+    rsync --archive --delete ./build/ ./devbuild/
+    rsync --archive ./extensions/ ./devbuild/extensions/
+fi
 
 make \
     STAFF_CLIENT_BUILD_ID="$BUILD_ID" \
     STAFF_CLIENT_STAMP_ID="$STAMP_ID" \
     STAFF_CLIENT_VERSION="$VERSION" \
-    rigrelease >/dev/null
+    install
 
 make \
     STAFF_CLIENT_BUILD_ID="$BUILD_ID" \
     STAFF_CLIENT_STAMP_ID="$STAMP_ID" \
     STAFF_CLIENT_VERSION="$VERSION" \
-    win-client >/dev/null
+    rigrelease
+
+make \
+    STAFF_CLIENT_BUILD_ID="$BUILD_ID" \
+    STAFF_CLIENT_STAMP_ID="$STAMP_ID" \
+    STAFF_CLIENT_VERSION="$VERSION" \
+    win-client
 
 move_to_web
 

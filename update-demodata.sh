@@ -1,15 +1,35 @@
 #!/bin/bash -x
 
+# @see http://openlibrary.org/developers/dumps
+# @see 
+
 set -o errexit
 
-/etc/init.d/postgresql-9.1 restart
+if [ -z "${openils_source}" ]; then
+    echo "I Need openils_source to be set"
+    exit 1
+fi
 
 if [ -z "${PGUSER}" ]; then
     exit "I Need PGUSER to be set"
 fi
 
+# Stop Stack
+/etc/init.d/apache2 stop
+/etc/init.d/opensrf stop
+/etc/init.d/ejabberd stop
+/etc/init.d/memcached stop
+if [ -x /etc/init.d/postgresql-9.1 ]
+then 
+    /etc/init.d/postgresql-9.1 restart
+fi
+if [ -x /etc/init.d/postgresql-9.2 ]
+then 
+    /etc/init.d/postgresql-9.2 restart
+fi
+
 # Load all the Evergreen Sample Data
-cd /usr/src/Evergreen/Open-ILS/tests/datasets/sql
+cd $openils_source/Open-ILS/tests/datasets/sql
 psql --quiet --file ./load_all.sql
 cd -
 
@@ -32,8 +52,8 @@ psql --quiet --set=ON_ERROR_STOP --file ./sql/06-patrons.sql >/dev/null
 #  545  psql -U egpg -f mfhd21.sql evergreen
 #
 
-rm -f catalog.bre catalog.marc catalog.marc.zip catalog.sql
-wget -qs http://www.gutenberg.org/feeds/catalog.marc.zip >/dev/null
+rm -f catalog.bre catalog.marc catalog.marc.zip catalog.sql catalog_import_*
+wget -q http://www.gutenberg.org/feeds/catalog.marc.zip >/dev/null
 unzip catalog.marc.zip >/dev/null
 # processes about 240 records per second
 perl /openils/bin/marc2bre.pl \
@@ -43,14 +63,16 @@ perl /openils/bin/marc2bre.pl \
 # perl /usr/src/Evergreen/Open-ILS/src/extras/import/direct_ingest.pl catalog.bre > catalog.ingest
 # perl /usr/src/Evergreen/Open-ILS/src/extras/import/pg_loader.pl -or bre -or mrd -or mfr -or mtfe -or mafe -or msfe -or mkfe -or msefe -a mrd -a mfr -a mtfe -a mafe -a msfe -a mkfe -a msefe >catalog.sql <catalog.bre
 /etc/init.d/ejabberd restart
+sleep 4
 /etc/init.d/opensrf restart
 
 # Need to split this into chunks
+# Each Iteration takes about 5 minutes - 6.8 records per second
 split --lines=2048 catalog.bre catalog_import_
 for f in catalog_import_*
 do
     perl \
-        /usr/src/Evergreen/Open-ILS/src/extras/import/pg_loader.pl \
+        $openils_source/Open-ILS/src/extras/import/pg_loader.pl \
         -or bre -or mrd -or mfr -or mtfe -or mafe -or msfe -or mkfe -or msefe -a mrd -a mfr -a mtfe -a mafe -a msfe -a mkfe -a msefe \
         >catalog.sql <$f
 
@@ -58,7 +80,7 @@ do
     rm $f
 done
 
-psql --command='\i /usr/src/Evergreen/Open-ILS/src/extras/import/quick_metarecord_map.sql'
+psql --command="\\i $openils_source/Open-ILS/src/extras/import/quick_metarecord_map.sql"
 # psql -U postgres evergreen -c 'UPDATE biblio.record_entry SET source = 3; ';
 
 # This will take many minutes

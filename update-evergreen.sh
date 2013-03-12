@@ -1,20 +1,28 @@
 #!/bin/bash -x
 
+if [ -z "${openils_branch}" ]; then
+    echo "I Need openils_branch to be set"
+    exit 1
+fi
+
+if [ -z "${openils_source}" ]; then
+    echo "I Need openils_source to be set"
+    exit 1
+fi
+
 #
 # Evergreen
 function update_openils()
 {
-    cd /usr/src
-
-    if [ -d Evergreen ]; then
-        cd ./Evergreen
+    if [ -d "$openils_source" ]; then
+        cd "$openils_source"
         git checkout master
         git pull
         git checkout $openils_branch
         # make clean
     else
-        git clone git://git.evergreen-ils.org/Evergreen.git
-        cd ./Evergreen
+        git clone git://git.evergreen-ils.org/Evergreen.git "$openils_source"
+        cd "$openils_source"
         git checkout $openils_branch
     fi
 
