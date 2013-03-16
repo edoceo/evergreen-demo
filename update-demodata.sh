@@ -19,14 +19,7 @@ fi
 /etc/init.d/opensrf stop
 /etc/init.d/ejabberd stop
 /etc/init.d/memcached stop
-if [ -x /etc/init.d/postgresql-9.1 ]
-then 
-    /etc/init.d/postgresql-9.1 restart
-fi
-if [ -x /etc/init.d/postgresql-9.2 ]
-then 
-    /etc/init.d/postgresql-9.2 restart
-fi
+/etc/init.d/postgresql-9.2 restart
 
 # Load all the Evergreen Sample Data
 cd $openils_source/Open-ILS/tests/datasets/sql
@@ -86,5 +79,4 @@ psql --command="\\i $openils_source/Open-ILS/src/extras/import/quick_metarecord_
 # This will take many minutes
 time psql --file ./sql/30-fill-call-copy.sql
 
-# /etc/init.d/postgresql-9.1 stop
 rm -f catalog.bre catalog.marc catalog.marc.zip catalog.sql

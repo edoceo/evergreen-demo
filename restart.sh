@@ -18,7 +18,7 @@ function stack_stop()
   /etc/init.d/opensrf stop
   /etc/init.d/ejabberd stop
   /etc/init.d/memcached stop
-  /etc/init.d/postgresql-9.1 stop
+  /etc/init.d/postgresql-9.2 stop
 
   while pidof apache2
   do
@@ -70,7 +70,7 @@ function stack_stop()
 
 function stack_start()
 {
-    /etc/init.d/postgresql-9.1 start
+    /etc/init.d/postgresql-9.2 start
     /etc/init.d/memcached start
     /etc/init.d/ejabberd start
     sleep 4

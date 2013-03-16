@@ -12,7 +12,6 @@ export opensrf_source="/usr/src/OpenSRF"
 # openils_branch="remotes/origin/rel_2_3"
 export openils_branch="master"
 
-# export openils_source="/usr/src/Evergreen-Custom"
 export openils_source="/usr/src/Evergreen"
 
 #

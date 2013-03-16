@@ -31,14 +31,7 @@ echo $(( $(awk '/MemTotal/ { print $2 }' /proc/meminfo) * 1024 / 4 )) > /proc/sy
 # sed -i "s/^shared_buffers.*/shared_buffers = ${x}MB/" /etc/postgresql/9.2/main/postgresql.conf
 # grep -inr shared_buffers /etc/postgresql/
 
-if [ -x /etc/init.d/postgresql-9.1 ]
-then 
-    /etc/init.d/postgresql-9.1 restart
-fi
-if [ -x /etc/init.d/postgresql-9.2 ]
-then 
-    /etc/init.d/postgresql-9.2 restart
-fi
+/etc/init.d/postgresql-9.2 restart
 
 #
 # Create/Update the PostgreSQL Side
@@ -59,11 +52,4 @@ function update_database()
 }
 update_database
 
-if [ -x /etc/init.d/postgresql-9.1 ]
-then 
-    /etc/init.d/postgresql-9.1 stop
-fi
-if [ -x /etc/init.d/postgresql-9.2 ]
-then 
-    /etc/init.d/postgresql-9.2 stop
-fi
+/etc/init.d/postgresql-9.2 stop

@@ -20,14 +20,7 @@ egd_root=$(dirname $(readlink -f $0))
 /etc/init.d/opensrf stop
 /etc/init.d/ejabberd stop
 /etc/init.d/memcached stop
-if [ -x /etc/init.d/postgresql-9.1 ]
-then 
-    /etc/init.d/postgresql-9.1 stop
-fi
-if [ -x /etc/init.d/postgresql-9.2 ]
-then 
-    /etc/init.d/postgresql-9.2 stop
-fi
+/etc/init.d/postgresql-9.2 stop
 
 # Run the Updates
 $egd_root/update-opensrf.sh
@@ -54,14 +47,7 @@ if
 
 # Update Database Stuff
 $egd_root/update-postgresql.sh
-if [ -x /etc/init.d/postgresql-9.1 ]
-then 
-    /etc/init.d/postgresql-9.1 restart
-fi
-if [ -x /etc/init.d/postgresql-9.2 ]
-then 
-    /etc/init.d/postgresql-9.2 restart
-fi
+/etc/init.d/postgresql-9.2 restart
 
 # Update eJabberd
 $egd_root/update-ejabberd.sh
