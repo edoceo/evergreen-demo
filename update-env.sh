@@ -3,6 +3,7 @@
 # Set some Vars
 # opensrf_branch="remotes/origin/rel_2_1"
 export opensrf_branch="master"
+export opensrf_branch="remotes/origin/rel_2_2"
 
 export opensrf_source="/usr/src/OpenSRF"
 
@@ -11,6 +12,7 @@ export opensrf_source="/usr/src/OpenSRF"
 # remotes/origin/rel_2_3 is 2.3.0 plus post-release fixes
 # openils_branch="remotes/origin/rel_2_3"
 export openils_branch="master"
+export openils_branch="remotes/origin/tags/rel_2_4_beta1"
 
 export openils_source="/usr/src/Evergreen"
 

@@ -44,10 +44,27 @@ function update_database()
 
     cd $openils_source
 
-    perl Open-ILS/src/support-scripts/eg_db_config.pl \
-        --update-config --service all --create-database --create-schema --create-offline \
-        --user ${PGUSER} --password ${PGUSER} --hostname ${PGHOSTNAME} \
-        --database ${PGDATABASE} --admin-user ${EGUSER} --admin-pass ${EGUSER} >/dev/null
+    # >= 2.4
+    if [ -f Open-ILS/src/support-scripts/eg_db_config ]
+    then
+
+        perl Open-ILS/src/support-scripts/eg_db_config \
+            --update-config --service all --create-database --create-schema --create-offline \
+            --user ${PGUSER} --password ${PGUSER} --hostname ${PGHOSTNAME} --port 5432 \
+            --database ${PGDATABASE} --admin-user ${EGUSER} --admin-pass ${EGUSER} >/dev/null
+
+    # <= 2.3
+    elif [ -f Open-ILS/src/support-scripts/eg_db_config.pl ]
+    then
+        perl Open-ILS/src/support-scripts/eg_db_config.pl \
+            --update-config --service all --create-database --create-schema --create-offline \
+            --user ${PGUSER} --password ${PGUSER} --hostname ${PGHOSTNAME} \
+            --database ${PGDATABASE} --admin-user ${EGUSER} --admin-pass ${EGUSER} >/dev/null
+
+    else
+        echo "Cannot find an eg_db_config script - Fatal"
+        exit 1
+    fi
 
 }
 update_database

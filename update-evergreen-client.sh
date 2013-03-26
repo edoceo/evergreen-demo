@@ -5,9 +5,8 @@
 
 set -o errexit
 
-
 bd="$openils_source/Open-ILS/xul/staff_client"
-hm=$(date +%H%M)
+# hm=$(date +%H%M)
 
 # Handle this bug in 2.2 based system
 # @see https://bugs.launchpad.net/evergreen/+bug/988493
@@ -15,6 +14,8 @@ if [ -z "$WEBDIR" ]; then
     export WEBDIR=/openils/var/web
 fi
 
+scpub_dir="/openils/var/web/staff-client"
+mkdir -p $scpub_dir
 
 function move_to_web()
 {
@@ -22,11 +23,13 @@ function move_to_web()
     mkdir -p $scpub_dir
 
     d="$scpub_dir/evergreen-staff-client"
+
     if [ -n "${VERSION}" ]; then d="$d-${VERSION}" ; fi
     if [ -n "${STAMP_ID}" ]; then d="$d-${STAMP_ID}" ; fi
     if [ -n "${BUILD_ID}" ]; then d="$d-${BUILD_ID}" ; fi
     d="$d.exe"
-    mv $bd/evergreen_staff_client_setup.exe "$d"
+    # mv $bd/evergreen_staff_client_setup.exe "$d"
+    # mv $1 "$d"
 
 }
 
@@ -164,3 +167,6 @@ move_to_web
 # apt-get install zip
 # ./configure --prefix=/mnt/xul/xulrunner/
 # rsync -av ./build /mnt/xul/staff-client/
+
+# Set Perms
+chown -R opensrf:opensrf /openils/var/web
