@@ -36,17 +36,19 @@ $egd_root/update-postgresql.sh
 
 $egd_root/update-evergreen-client.sh
 
-#
-#
-/etc/init.d/postgresql-9.2 restart
-/etc/init.d/memcached restart
-/etc/init.d/ejabberd restart
+$egd_root/restart.sh
 
-#nano -w /openils/bin/osrf_ctl.sh
-# sed -i 's|/bin/sh|/bin/sh -x|' /openils/bin/osrf_ctl.sh
-# Yes, Twice, first time opensrf doesn't always start properly
-/etc/init.d/opensrf restart
-sleep 4
+#
+#
+# /etc/init.d/postgresql-9.2 restart
+# /etc/init.d/memcached restart
+# /etc/init.d/ejabberd restart
+# 
+# #nano -w /openils/bin/osrf_ctl.sh
+# # sed -i 's|/bin/sh|/bin/sh -x|' /openils/bin/osrf_ctl.sh
+# # Yes, Twice, first time opensrf doesn't always start properly
+# /etc/init.d/opensrf restart
+# sleep 4
 
 #
 # Some Left Overs
@@ -70,8 +72,10 @@ echo -en "request opensrf.math add 2 2\nquit\n" | su -c /openils/bin/srfsh opens
 
 #
 # Updates for Web-Server
-$egd_root/update-apache.sh
-/etc/init.d/apache2 restart
+# $egd_root/update-apache.sh
+# /etc/init.d/apache2 restart
+
+$egd_root/restart.sh
 
 # /usr/src/Evergreen/Open-ILS/src/support-scripts/settings-tester.pl
 $openils_source/Open-ILS/src/support-scripts/settings-tester.pl

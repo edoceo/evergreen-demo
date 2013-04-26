@@ -30,6 +30,7 @@ function update_openils()
         git checkout $openils_branch
     fi
 
+    cd "$openils_source"
     chown -R opensrf:opensrf .
 
     su -c 'PATH="/openils/bin:/usr/bin:/bin" make clean' opensrf >/dev/null
@@ -52,15 +53,28 @@ function update_openils()
     fi
 
     cd ./etc
-    for f in *.example do
+    for f in *.example
+    do
         mv $f "${f%%.example}"
     done
 
 }
 update_openils
 
-#
-#
+#echo "Now you should edit /openils/bin/osrf_ctl.sh"
+# mv /openils/etc/opensrf_core.xml.example /openils/etc/opensrf_core.xml
+sed -i 's|loglevel>\([0-9]\)</loglevel|loglevel>1</loglevel|' /openils/etc/opensrf_core.xml
+sed -i 's|logfile>.+</logfile|logfile>syslog</logfile|' /openils/etc/opensrf_core.xml
+
+# turn everything down
+# mv /openils/etc/opensrf.xml.example /openils/etc/opensrf.xml
+# This ugly hack, to make full paths for the openils libs?
+sed -i 's|ion>\(o.*.so\)</imp|ion>/openils/lib/\1</imp|' /openils/etc/opensrf.xml
+sed -i 's|<min_children>[0-9]*</min_children>|<min_children>1</min_children>|' /openils/etc/opensrf.xml
+sed -i 's|<max_children>[0-9]*</max_children>|<max_children>8</max_children>|' /openils/etc/opensrf.xml
+sed -i 's|<min_spare_children>[0-9]*</min_spare_children>|<min_spare_children>1</min_spare_children>|' /openils/etc/opensrf.xml
+sed -i 's|<max_spare_children>[0-9]*</max_spare_children>|<max_spare_children>4</max_spare_children>|' /openils/etc/opensrf.xml
+
 #    !  RPC::XML::Function is not installed
 #    !  RPC::XML::Method is not installed
 

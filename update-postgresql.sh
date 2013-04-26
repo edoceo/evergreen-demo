@@ -38,9 +38,9 @@ echo $(( $(awk '/MemTotal/ { print $2 }' /proc/meminfo) * 1024 / 4 )) > /proc/sy
 function update_database()
 {
     # su -l -c 'createuser --superuser egpg' postgres || true
-    su -l -c "dropdb ${PGDATABASE}" postgres || true
-    su -l -c "dropuser ${PGUSER}" postgres || true
-    echo -en "${PGUSER}\n${PGUSER}\n" | su -l -c "createuser --superuser ${PGUSER}" postgres || true
+    # su -l -c "dropdb ${PGDATABASE}" postgres || true
+    # su -l -c "dropuser ${PGUSER}" postgres || true
+    # echo -en "${PGUSER}\n${PGUSER}\n" | su -l -c "createuser --superuser ${PGUSER}" postgres || true
 
     cd $openils_source
 
@@ -49,16 +49,18 @@ function update_database()
     then
 
         perl Open-ILS/src/support-scripts/eg_db_config \
-            --update-config --service all --create-database --create-schema --create-offline \
-            --user ${PGUSER} --password ${PGUSER} --hostname ${PGHOSTNAME} --port 5432 \
+            --update-config --service all \
+            --create-database --create-schema --create-offline \
+            --user ${PGUSER} --password ${PGUSER} --hostname ${PGHOST} --port 5432 \
             --database ${PGDATABASE} --admin-user ${EGUSER} --admin-pass ${EGUSER} >/dev/null
 
     # <= 2.3
     elif [ -f Open-ILS/src/support-scripts/eg_db_config.pl ]
     then
         perl Open-ILS/src/support-scripts/eg_db_config.pl \
-            --update-config --service all --create-database --create-schema --create-offline \
-            --user ${PGUSER} --password ${PGUSER} --hostname ${PGHOSTNAME} \
+            --update-config --service all \
+            --create-database --create-schema --create-offline \
+            --user ${PGUSER} --password ${PGUSER} --hostname ${PGHOST} \
             --database ${PGDATABASE} --admin-user ${EGUSER} --admin-pass ${EGUSER} >/dev/null
 
     else
