@@ -33,6 +33,7 @@ function stack_stop()
   then
     echo "There are loads of OpenSRF processes running"
     kill $(ps -eo pid,cmd |awk '/OpenSRF/ { print $1 }')
+    kill $(ps -eo pid,cmd |awk '/OpenSRF/ { print $1 }')
   fi
   rm -f /openils/var/log/*log
   rm -f /openils/var/run/opensrf/*pid
