@@ -12,18 +12,25 @@ export opensrf_source="/usr/src/OpenSRF"
 # remotes/origin/rel_2_3 is 2.3.0 plus post-release fixes
 # openils_branch="remotes/origin/rel_2_3"
 export openils_branch="master"
-export openils_branch="remotes/origin/tags/rel_2_4_beta1"
+#export openils_branch="remotes/origin/tags/rel_2_4_beta1"
+#export openils_branch="user/edoceo/lp1076803a"
+#export openils_branch="remotes/origin/rel_2_4"
 
 export openils_source="/usr/src/Evergreen"
 
 #
 # Server Stuff
-export EGUSER="egsa"
-export EGPASSWORD="egsa"
+export PGHOST="localhost"
 export PGUSER="egpg"
 export PGPASSWORD="egpg"
-export PGHOSTNAME="localhost"
 export PGDATABASE="evergreen"
+
+# Jabber Networks
+export XMPP_PRI="private.localhost"
+export XMPP_PUB="public.localhost"
+
+export EGUSER="egsa"
+export EGPASSWORD="egsa"
 
 #
 # Staff Client Stuff
