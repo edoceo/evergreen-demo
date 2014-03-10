@@ -33,7 +33,7 @@ function update_openils()
     cd "$openils_source"
     chown -R opensrf:opensrf .
 
-    su -c 'PATH="/openils/bin:/usr/bin:/bin" make clean' opensrf >/dev/null
+    su -c 'PATH="/openils/bin:/usr/bin:/bin" make clean' opensrf >/dev/null || true
     su -c 'PATH="/openils/bin:/usr/bin:/bin" autoreconf -i' opensrf >/dev/null
 
     su -c 'PATH="/openils/bin:/usr/bin:/bin" ./configure --prefix=/openils --disable-python \
